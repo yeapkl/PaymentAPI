@@ -8,8 +8,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface PaymentDetailsRepository extends PagingAndSortingRepository<PaymentDetails,Integer> {
-    List<PaymentDetails> findAllByCustomerId(int customerId, Pageable pageable);
-    List<PaymentDetails> findAllByAccountNumber(String accountNumber, Pageable pageable);
+public interface PaymentDetailsRepository extends PagingAndSortingRepository<PaymentDetails,Long> {
+    List<PaymentDetails> findAllByCustomerId(Long customerId, Pageable pageable);
+    List<PaymentDetails> findAllByAccountNumber(Long accountNumber, Pageable pageable);
     List<PaymentDetails> findAllByDescription(String description, Pageable pageable);
 }

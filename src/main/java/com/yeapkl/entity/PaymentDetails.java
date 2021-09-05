@@ -15,14 +15,15 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+@EqualsAndHashCode
 public class PaymentDetails {
 
     @Id
     @GeneratedValue
-    private int id;
+    private Long id;
 
     @NonNull
-    private String accountNumber;
+    private Long accountNumber;
 
     @NonNull
     private BigDecimal trxAmount;
@@ -34,5 +35,5 @@ public class PaymentDetails {
     private LocalDateTime trxDateTime;
 
     @NonNull
-    private int customerId;
+    private Long customerId;
 }
